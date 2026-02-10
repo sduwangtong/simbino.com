@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simbino LLC - Trendy Culture & Boba Tea Apps</title>
+    <meta name="description" content="Simbino LLC builds apps and content celebrating boba tea culture. Home of Boba Diary, the smart milk tea tracker for iOS.">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        a { color: #ec428c; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* Navigation */
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+        .nav-inner {
+            max-width: 1100px; margin: 0 auto; padding: 0 20px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .nav-brand {
+            font-size: 1.3em; font-weight: 700; color: #333;
+        }
+        .nav-brand span { color: #ec428c; }
+        .nav-links a {
+            color: #555; margin-left: 30px; font-size: 0.95em; font-weight: 500;
+        }
+        .nav-links a:hover { color: #ec428c; text-decoration: none; }
+
+        /* Hero */
+        .hero {
+            padding: 140px 20px 80px;
+            text-align: center;
+            background: linear-gradient(135deg, #fff5f9 0%, #fff 50%, #f5f0ff 100%);
+        }
+        .hero h1 {
+            font-size: 2.8em; font-weight: 800; color: #222;
+            margin-bottom: 15px; line-height: 1.2;
+        }
+        .hero h1 span { color: #ec428c; }
+        .hero p {
+            font-size: 1.2em; color: #666; max-width: 600px; margin: 0 auto 30px;
+        }
+
+        /* Sections */
+        section { padding: 80px 20px; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .section-title {
+            font-size: 2em; font-weight: 700; text-align: center;
+            margin-bottom: 15px; color: #222;
+        }
+        .section-subtitle {
+            text-align: center; color: #666; font-size: 1.1em;
+            max-width: 600px; margin: 0 auto 50px;
+        }
+
+        /* About */
+        .about { background: #fff; }
+        .about-grid {
+            display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px;
+        }
+        .about-card {
+            text-align: center; padding: 30px;
+        }
+        .about-icon {
+            width: 60px; height: 60px; border-radius: 15px;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 20px; font-size: 1.6em;
+        }
+        .about-icon.pink { background: #fce4ef; }
+        .about-icon.purple { background: #ede4fc; }
+        .about-icon.orange { background: #fce8d4; }
+        .about-card h3 { font-size: 1.2em; margin-bottom: 10px; color: #222; }
+        .about-card p { color: #666; font-size: 0.95em; }
+
+        /* App Showcase */
+        .app-section { background: #fafafa; }
+        .app-showcase {
+            display: grid; grid-template-columns: auto 1fr; gap: 60px;
+            align-items: center;
+        }
+        .app-icon-wrap {
+            text-align: center;
+        }
+        .app-icon-wrap img {
+            width: 200px; height: 200px; border-radius: 40px;
+            box-shadow: 0 20px 60px rgba(236,66,140,0.2);
+        }
+        .app-info h3 {
+            font-size: 1.8em; font-weight: 700; color: #222; margin-bottom: 10px;
+        }
+        .app-info .tagline {
+            font-size: 1.1em; color: #ec428c; font-weight: 500; margin-bottom: 20px;
+        }
+        .app-info p { color: #555; margin-bottom: 20px; }
+        .feature-list {
+            list-style: none; display: grid;
+            grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 25px;
+        }
+        .feature-list li {
+            color: #444; font-size: 0.95em; padding-left: 22px;
+            position: relative;
+        }
+        .feature-list li::before {
+            content: "\2713"; position: absolute; left: 0;
+            color: #ec428c; font-weight: 700;
+        }
+        .app-badge {
+            display: inline-block; padding: 12px 28px;
+            background: #000; color: #fff; border-radius: 10px;
+            font-weight: 600; font-size: 0.95em;
+        }
+        .app-badge:hover { background: #222; text-decoration: none; }
+
+        /* Content / YouTube */
+        .content-section { background: #fff; }
+        .content-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+        }
+        .content-card {
+            background: #fafafa; border-radius: 16px; padding: 40px;
+            border: 1px solid #eee;
+        }
+        .content-card h3 { font-size: 1.3em; margin-bottom: 12px; color: #222; }
+        .content-card p { color: #666; margin-bottom: 15px; }
+        .content-card .link-arrow { font-weight: 600; }
+
+        /* Brands */
+        .brands { background: #fafafa; text-align: center; }
+        .brand-logos {
+            display: flex; justify-content: center; gap: 40px;
+            flex-wrap: wrap; opacity: 0.6;
+        }
+        .brand-logos span {
+            font-size: 1em; color: #888; font-weight: 500;
+            padding: 10px 20px; background: #fff; border-radius: 8px;
+            border: 1px solid #eee;
+        }
+
+        /* Footer */
+        footer {
+            background: #222; color: #aaa; padding: 50px 20px;
+        }
+        .footer-inner {
+            max-width: 1100px; margin: 0 auto;
+            display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px;
+        }
+        .footer-brand { font-size: 1.2em; font-weight: 700; color: #fff; margin-bottom: 10px; }
+        .footer-brand span { color: #ec428c; }
+        footer p { font-size: 0.9em; margin-bottom: 8px; }
+        footer h4 { color: #fff; margin-bottom: 15px; font-size: 1em; }
+        footer ul { list-style: none; }
+        footer ul li { margin-bottom: 8px; }
+        footer ul a { color: #aaa; font-size: 0.9em; }
+        footer ul a:hover { color: #ec428c; }
+        .footer-bottom {
+            max-width: 1100px; margin: 30px auto 0;
+            padding-top: 20px; border-top: 1px solid #444;
+            font-size: 0.85em; text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2em; }
+            .about-grid { grid-template-columns: 1fr; }
+            .app-showcase { grid-template-columns: 1fr; text-align: center; }
+            .feature-list { grid-template-columns: 1fr; }
+            .content-grid { grid-template-columns: 1fr; }
+            .footer-inner { grid-template-columns: 1fr; }
+            .nav-links a { margin-left: 15px; font-size: 0.85em; }
+            .brand-logos { gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-inner">
+            <div class="nav-brand">simbino<span>.</span></div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#app">Our App</a>
+                <a href="#content">Content</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>We Build for<br><span>Boba Culture</span></h1>
+            <p>Simbino LLC creates apps and content that celebrate trendy tea culture. From tracking your daily boba to exploring the latest flavors, we make it fun.</p>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">What We Do</h2>
+            <p class="section-subtitle">Simbino LLC is a small studio focused on boba tea culture, mobile apps, and lifestyle content.</p>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon pink">&#x1F4F1;</div>
+                    <h3>Mobile Apps</h3>
+                    <p>We design and develop iOS apps that help boba lovers track their drinks, discover new flavors, and stay on top of their consumption habits.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon purple">&#x1F3AC;</div>
+                    <h3>Content Creation</h3>
+                    <p>Our YouTube channel covers boba tea reviews, trendy culture, and lifestyle topics. We share our passion for tea culture with a growing community.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon orange">&#x2615;</div>
+                    <h3>Trendy Culture</h3>
+                    <p>We stay connected to what's happening in the boba world&mdash;new flavors, emerging brands, health trends, and the community that makes it all fun.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Showcase -->
+    <section class="app-section" id="app">
+        <div class="container">
+            <h2 class="section-title">Our App</h2>
+            <p class="section-subtitle">Meet Boba Diary, the smartest way to track your milk tea journey.</p>
+            <div class="app-showcase">
+                <div class="app-icon-wrap">
+                    <img src="app-icon.png" alt="Boba Diary App Icon">
+                </div>
+                <div class="app-info">
+                    <h3>Boba Diary</h3>
+                    <p class="tagline">Your personal milk tea tracker</p>
+                    <p>Log drinks in seconds, monitor sugar and calories, set monthly goals, scan receipts with AI, and visualize your consumption trends. Available in English and Chinese.</p>
+                    <ul class="feature-list">
+                        <li>Quick drink logging</li>
+                        <li>AI receipt scanning</li>
+                        <li>Monthly spending ledger</li>
+                        <li>Consumption analytics</li>
+                        <li>Sugar &amp; calorie tracking</li>
+                        <li>Google Sheets sync</li>
+                        <li>Bilingual (EN/ZH)</li>
+                        <li>Goal setting &amp; KPIs</li>
+                    </ul>
+                    <span class="app-badge">Coming Soon on the App Store</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands We Track -->
+    <section class="brands">
+        <div class="container">
+            <h2 class="section-title">Brands We Track</h2>
+            <p class="section-subtitle">Boba Diary supports popular tea chains out of the box.</p>
+            <div class="brand-logos">
+                <span>Kung Fu Tea</span>
+                <span>Gong Cha</span>
+                <span>Tiger Sugar</span>
+                <span>It's Boba Time</span>
+                <span>CoCo</span>
+                <span>Nayuki</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="content-section" id="content">
+        <div class="container">
+            <h2 class="section-title">Our Content</h2>
+            <p class="section-subtitle">Beyond apps, we create content about boba tea and trendy culture.</p>
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>YouTube Channel</h3>
+                    <p>Boba tea reviews, taste tests, and trendy culture content. Join our community of tea lovers exploring the best drinks around.</p>
+                    <a href="https://www.youtube.com/@simbino" class="link-arrow" target="_blank" rel="noopener">Watch on YouTube &rarr;</a>
+                </div>
+                <div class="content-card">
+                    <h3>Boba Tea Culture</h3>
+                    <p>We cover the latest in boba tea trends, from new flavor innovations to health-conscious alternatives. Stay connected with the community through our app and content.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <div class="footer-brand">simbino<span>.</span></div>
+                <p>Simbino LLC is a small studio building apps and content for boba tea culture.</p>
+                <p>Contact: <a href="mailto:support@simbino.com">support@simbino.com</a></p>
+            </div>
+            <div>
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="#app">Boba Diary</a></li>
+                    <li><a href="https://www.youtube.com/@simbino" target="_blank" rel="noopener">YouTube</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Simbino LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
