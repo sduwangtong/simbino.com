@@ -111,23 +111,28 @@
                         <td>AI-powered receipt scanning</td>
                     </tr>
                     <tr>
+                        <td><strong>Coarse Location</strong></td>
+                        <td>Approximate location (with your permission)</td>
+                        <td>Associate drinks with general purchase areas</td>
+                    </tr>
+                    <tr>
                         <td><strong>Diagnostics</strong></td>
                         <td>Crash logs, performance data</td>
                         <td>App stability and improvement</td>
                     </tr>
                 </table>
-                <p>We do <strong>not</strong> collect precise location data, health data, or financial information beyond what you voluntarily enter as drink spending.</p>
+                <p>We collect <strong>coarse (approximate) location</strong> data only with your explicit permission. We do <strong>not</strong> collect precise location data, health data, or financial information beyond what you voluntarily enter as drink spending. You may disable location access at any time in your device settings.</p>
             </div>
 
             <div class="section">
                 <h2>3. Third-Party Services</h2>
                 <p>The App integrates the following third-party services, each governed by their own privacy policies:</p>
                 <ul>
-                    <li><strong>Google Sign-In (Firebase Authentication):</strong> Used for account creation and login. Collects your Google account email and profile name. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+                    <li><strong>Sign in with Apple:</strong> Used for account creation and login. Collects your Apple ID email (or relay email) and display name. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></li>
+                    <li><strong>Google Sign-In:</strong> Used for account creation and login. Collects your Google account email and profile name. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
                     <li><strong>Google Gemini API:</strong> Used for AI-powered receipt scanning. Receipt images you submit are sent to Google's API for text extraction. Images are processed in real time and are not stored by us after processing. <a href="https://ai.google.dev/terms" target="_blank" rel="noopener">Google AI Terms</a></li>
                     <li><strong>Google AdMob:</strong> Used to display advertisements. AdMob may collect device identifiers, IP address, and usage data to serve relevant ads. You can opt out of personalized advertising in your device settings. <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Ads Privacy</a></li>
                     <li><strong>Google Sheets API:</strong> Used for optional data sync. When enabled, your drink logs are synced to a Google Sheet in your own Google Drive. We access only the specific sheet created by the App.</li>
-                    <li><strong>Firebase (Cloud Firestore):</strong> Used for cloud data storage and sync. Your drink logs and account data are stored in Firebase. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a></li>
                 </ul>
             </div>
 
@@ -179,7 +184,7 @@
                 <p>We implement industry-standard security measures to protect your data, including:</p>
                 <ul>
                     <li>Encrypted data transmission (HTTPS/TLS).</li>
-                    <li>Firebase security rules restricting data access to authenticated users.</li>
+                    <li>Secure on-device storage with encrypted credentials.</li>
                     <li>No local storage of sensitive credentials on your device.</li>
                 </ul>
                 <p>While we strive to protect your information, no method of electronic transmission or storage is 100% secure.</p>
