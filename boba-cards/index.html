@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Boba Cards — Earn a collectible card with every post · Boba Tea</title>
+<meta name="description" content="Boba Cards is now live in Boba Tea. Every post pulls a collectible boba card across five rarity tiers — common, rare, epic, legendary, and one-of-a-kind iconic.">
+<link rel="canonical" href="https://simbino.com/boba-cards/">
+
+<!-- Universal Link smart hand-off: iOS users with the app installed will be
+     opened straight into the app (once v1.5.2 ships with the applinks
+     entitlement); everyone else stays on this page. -->
+<meta name="apple-itunes-app" content="app-id=6759429663">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:title" content="Boba Cards — collect a card with every post">
+<meta property="og:description" content="Five rarities. One-of-a-kind iconic cards. Drag onto your photo. Now live in Boba Tea.">
+<meta property="og:image" content="https://simbino.com/boba-cards/hero.png">
+<meta property="og:url" content="https://simbino.com/boba-cards/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Boba Cards — collect a card with every post">
+<meta name="twitter:description" content="Five rarities. One-of-a-kind iconic cards. Now live in Boba Tea.">
+<meta name="twitter:image" content="https://simbino.com/boba-cards/hero.png">
+
+<!-- Google Ads (parity with simbino.com root) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18100115415"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18100115415');
+</script>
+
+<style>
+  :root {
+    --cream:    #FFF7EE;
+    --cream-2:  #FCF0E4;
+    --brown:    #3C2A1E;
+    --mute:     #8C6E5A;
+    --pink:     #E8709A;
+    --pink-deep:#D45A87;
+    --taro:     #B58FD9;
+    --gold:     #E8B57A;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, "SF Pro Rounded", "SF Pro Display", BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--brown);
+    background: linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 100%);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: var(--pink-deep); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Subtle nav back to simbino.com */
+  .topnav {
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .topnav .brand {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--brown);
+    letter-spacing: -0.2px;
+  }
+  .topnav .brand span { color: var(--pink); }
+  .topnav .home-link {
+    font-size: 14px;
+    color: var(--mute);
+  }
+
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 32px 24px 16px;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .eyebrow {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(232,112,154,0.12);
+    color: var(--pink-deep);
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: -1.2px;
+    line-height: 1.05;
+    margin-bottom: 14px;
+  }
+  h1 .gradient {
+    background: linear-gradient(110deg, var(--pink) 0%, var(--taro) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .sub {
+    font-size: 19px;
+    color: var(--mute);
+    max-width: 540px;
+    margin: 0 auto 28px;
+    line-height: 1.45;
+  }
+
+  /* Rarity pills */
+  .rarities {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    background: white;
+    color: var(--brown);
+    box-shadow: 0 2px 12px rgba(108,76,52,0.06);
+  }
+  .pill .dot { width: 9px; height: 9px; border-radius: 50%; }
+  .pill.common    .dot { background: #c9b9a5; }
+  .pill.rare      .dot { background: linear-gradient(45deg, #78b4ff, #c8dcff); }
+  .pill.epic      .dot { background: linear-gradient(45deg, #b482f0, #dcb4ff); }
+  .pill.legendary .dot { background: linear-gradient(45deg, #ffc350, #ffeb96); }
+  .pill.iconic    .dot { background: linear-gradient(45deg, #ffd764, #ff82dc, #82c8ff); }
+
+  /* CTAs */
+  .cta-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+  .cta-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 28px;
+    background: var(--pink);
+    color: white !important;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: 0 8px 24px rgba(232,112,154,0.35),
+                0 2px 4px rgba(232,112,154,0.2);
+    transition: transform 120ms ease, box-shadow 120ms ease;
+  }
+  .cta-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(232,112,154,0.45),
+                0 2px 4px rgba(232,112,154,0.2);
+    text-decoration: none;
+  }
+  .cta-primary:active { transform: translateY(0); }
+  .cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    padding: 16px 28px;
+    color: var(--brown) !important;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 600;
+    background: rgba(60,42,30,0.04);
+  }
+  .cta-secondary:hover { background: rgba(60,42,30,0.08); text-decoration: none; }
+
+  /* Phone frame with video */
+  .phone-stage {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+    padding: 0 24px;
+    position: relative;
+  }
+  .phone-stage::before {
+    content: '';
+    position: absolute;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(232,180,122,0.35) 0%, transparent 70%);
+    z-index: -1;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .phone {
+    width: 270px;
+    aspect-ratio: 9 / 19.5;
+    background: #111;
+    border-radius: 42px;
+    padding: 8px;
+    box-shadow: 0 30px 60px rgba(60,42,30,0.25),
+                0 12px 20px rgba(60,42,30,0.15),
+                inset 0 0 0 1.5px rgba(255,255,255,0.08);
+    position: relative;
+  }
+  .phone video {
+    width: 100%;
+    height: 100%;
+    border-radius: 34px;
+    object-fit: cover;
+    display: block;
+  }
+  .phone .notch {
+    position: absolute;
+    top: 18px; left: 50%; transform: translateX(-50%);
+    width: 100px; height: 30px;
+    background: #000;
+    border-radius: 999px;
+    z-index: 2;
+  }
+
+  /* Hero card grid */
+  .card-grid-section {
+    max-width: 1200px;
+    margin: 0 auto 100px;
+    padding: 0 24px;
+    text-align: center;
+  }
+  .section-title {
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: -0.6px;
+    margin-bottom: 12px;
+  }
+  .section-sub {
+    color: var(--mute);
+    font-size: 17px;
+    margin-bottom: 48px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .gridcard {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 18px rgba(108,76,52,0.06);
+    text-align: center;
+  }
+  .gridcard .emoji { font-size: 36px; margin-bottom: 8px; }
+  .gridcard .label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: var(--mute);
+    margin-bottom: 6px;
+  }
+  .gridcard .desc {
+    font-size: 14px;
+    color: var(--brown);
+    line-height: 1.5;
+  }
+
+  /* How it works */
+  .how {
+    max-width: 1100px;
+    margin: 0 auto 100px;
+    padding: 0 24px;
+  }
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 48px;
+  }
+  .step {
+    background: white;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 6px 24px rgba(108,76,52,0.06);
+  }
+  .step .num {
+    width: 36px; height: 36px;
+    background: var(--pink);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    margin-bottom: 16px;
+    font-size: 15px;
+  }
+  .step h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .step p {
+    color: var(--mute);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Footer CTA */
+  .footer-cta {
+    text-align: center;
+    padding: 80px 24px;
+    background: linear-gradient(180deg, transparent 0%, rgba(232,112,154,0.08) 100%);
+  }
+  .footer-cta h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+  .footer-cta p {
+    color: var(--mute);
+    margin-bottom: 28px;
+    font-size: 16px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 32px 24px;
+    color: var(--mute);
+    font-size: 13px;
+  }
+  footer a { color: var(--mute); border-bottom: 1px dotted var(--mute); }
+
+  @media (max-width: 700px) {
+    h1 { font-size: 38px; }
+    .sub { font-size: 16px; }
+    .section-title { font-size: 28px; }
+    .steps { grid-template-columns: 1fr; }
+    .phone { width: 230px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="/" class="brand">Simbino<span>·</span>com</a>
+  <a href="/" class="home-link">← Back to Simbino</a>
+</nav>
+
+<section class="hero">
+  <span class="eyebrow">New in Boba Tea · v1.5</span>
+  <h1>Collect a card with <span class="gradient">every post</span>.</h1>
+  <p class="sub">Snap, sip, and collect. Every post pulls a collectible boba card from a deck of fifty across five rarity tiers — one of which is truly one-of-a-kind.</p>
+
+  <div class="rarities">
+    <span class="pill common"><span class="dot"></span>Common</span>
+    <span class="pill rare"><span class="dot"></span>Rare</span>
+    <span class="pill epic"><span class="dot"></span>Epic</span>
+    <span class="pill legendary"><span class="dot"></span>Legendary</span>
+    <span class="pill iconic"><span class="dot"></span>Iconic ×1</span>
+  </div>
+
+  <div class="cta-row">
+    <a href="https://apps.apple.com/us/app/boba-tea/id6759429663" class="cta-primary" id="open-app-cta">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.05 12.04c-.03-2.94 2.4-4.35 2.51-4.42-1.37-2-3.5-2.27-4.25-2.3-1.81-.18-3.53 1.07-4.45 1.07-.92 0-2.34-1.04-3.85-1.01-1.98.03-3.8 1.15-4.82 2.93-2.06 3.57-.53 8.85 1.48 11.75.98 1.42 2.15 3.02 3.68 2.96 1.48-.06 2.04-.96 3.83-.96 1.78 0 2.29.96 3.86.93 1.6-.03 2.6-1.45 3.57-2.88 1.12-1.65 1.59-3.25 1.62-3.34-.04-.02-3.11-1.2-3.14-4.73zm-2.93-8.7c.82-1 1.38-2.39 1.22-3.78-1.18.05-2.6.78-3.45 1.77-.76.88-1.43 2.28-1.25 3.65 1.31.1 2.65-.66 3.48-1.64z"/>
+      </svg>
+      Open in Boba Tea
+    </a>
+    <a href="#how" class="cta-secondary">How it works</a>
+  </div>
+</section>
+
+<section class="phone-stage">
+  <div class="phone">
+    <div class="notch"></div>
+    <video autoplay muted loop playsinline preload="metadata" poster="hero.png">
+      <source src="preview.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<section class="card-grid-section">
+  <h2 class="section-title">Five rarity tiers</h2>
+  <p class="section-sub">From the boba you order every Friday to the legend everyone's chasing.</p>
+
+  <div class="grid">
+    <div class="gridcard">
+      <div class="emoji">🧋</div>
+      <div class="label">Common · 55%</div>
+      <div class="desc">Menu staples — the classics you sip every week.</div>
+    </div>
+    <div class="gridcard">
+      <div class="emoji">🌸</div>
+      <div class="label">Rare · 28%</div>
+      <div class="desc">Signature flavors with a distinct identity.</div>
+    </div>
+    <div class="gridcard">
+      <div class="emoji">✨</div>
+      <div class="label">Epic · 12%</div>
+      <div class="desc">Seasonal limiteds and cult-favorite drops.</div>
+    </div>
+    <div class="gridcard">
+      <div class="emoji">👑</div>
+      <div class="label">Legendary · 4%</div>
+      <div class="desc">Heritage drinks that defined a brand.</div>
+    </div>
+    <div class="gridcard">
+      <div class="emoji">💎</div>
+      <div class="label">Iconic · 1%</div>
+      <div class="desc">One single card. Pulled once across all players.</div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div style="text-align:center;">
+    <h2 class="section-title">How it works</h2>
+    <p class="section-sub">No paywall. No grind. Just sip and share.</p>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="num">1</div>
+      <h3>Snap a boba photo</h3>
+      <p>Open Boba Tea, frame your drink. The Boba-only mode auto-identifies what you're sipping.</p>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <h3>Pull your card</h3>
+      <p>Before you post, the pack opens. Drag and pinch to place the card on your photo. Double-tap to reset.</p>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <h3>Collect them all</h3>
+      <p>Cards land in your Ledger Pokedex with a parallax foil detail page. Tap "Owned" to see what you have, "All" to see what's still out there.</p>
+    </div>
+  </div>
+</section>
+
+<section class="footer-cta">
+  <h2>Ready to pull your first card?</h2>
+  <p>Boba Tea is free on the iOS App Store.</p>
+  <a href="https://apps.apple.com/us/app/boba-tea/id6759429663" class="cta-primary" id="open-app-cta-footer">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.05 12.04c-.03-2.94 2.4-4.35 2.51-4.42-1.37-2-3.5-2.27-4.25-2.3-1.81-.18-3.53 1.07-4.45 1.07-.92 0-2.34-1.04-3.85-1.01-1.98.03-3.8 1.15-4.82 2.93-2.06 3.57-.53 8.85 1.48 11.75.98 1.42 2.15 3.02 3.68 2.96 1.48-.06 2.04-.96 3.83-.96 1.78 0 2.29.96 3.86.93 1.6-.03 2.6-1.45 3.57-2.88 1.12-1.65 1.59-3.25 1.62-3.34-.04-.02-3.11-1.2-3.14-4.73zm-2.93-8.7c.82-1 1.38-2.39 1.22-3.78-1.18.05-2.6.78-3.45 1.77-.76.88-1.43 2.28-1.25 3.65 1.31.1 2.65-.66 3.48-1.64z"/>
+    </svg>
+    Get Boba Tea
+  </a>
+</section>
+
+<footer>
+  <p>© Simbino LLC · <a href="/">simbino.com</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p>
+</footer>
+
+<script>
+  // Track CTA taps as Google Ads conversions
+  document.querySelectorAll('#open-app-cta, #open-app-cta-footer').forEach(el => {
+    el.addEventListener('click', () => {
+      if (typeof gtag === 'function') {
+        gtag('event', 'click', {
+          event_category: 'cta',
+          event_label: 'open_in_boba_tea_from_event',
+          value: 1
+        });
+      }
+    });
+  });
+
+  // If app is installed (via Universal Link once v1.5.2 ships with the
+  // applinks entitlement), iOS handles the redirect automatically. No
+  // JS smart banner needed — apple-itunes-app meta tag covers Safari.
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["FQMAGHAT9A.Simbino.milkTeaTracker"],
+        "components": [
+          {
+            "/": "/boba-cards/*",
+            "comment": "Boba Cards In-App Event deep link → opens app to Ledger Pokedex once v1.5.2 ships the applinks entitlement and onOpenURL handler"
+          },
+          {
+            "/": "/boba-cards",
+            "comment": "Same path, no trailing slash"
+          }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["FQMAGHAT9A.Simbino.milkTeaTracker"]
+  }
+}
