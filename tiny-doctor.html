@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18100115415"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-18100115415');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny Doctor – Pretend Doctor Kit App for Kids' Habits (三假小医院) | Simbino</title>
+    <meta name="description" content="Tiny Doctor by Simbino is a pretend doctor kit app for kids 3–8. Six playful medical instruments end battles over hand-washing, tooth-brushing, screen time and picky eating. One-time purchase, no ads, no data collected. On Google Play now; iOS coming soon.">
+    <link rel="canonical" href="https://simbino.com/tiny-doctor.html">
+    <link rel="icon" type="image/png" href="tiny-doctor-icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Simbino">
+    <meta property="og:title" content="Tiny Doctor – Pretend Doctor Kit App for Kids' Habits">
+    <meta property="og:description" content="Six pretend medical instruments that end the nightly battles: hand-washing, tooth-brushing, screen time, picky eating. For kids 3–8. No ads, no data collected.">
+    <meta property="og:url" content="https://simbino.com/tiny-doctor.html">
+    <meta property="og:image" content="https://simbino.com/tiny-doctor-feature.png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="500">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tiny Doctor – Pretend Doctor Kit App for Kids' Habits">
+    <meta name="twitter:description" content="Six pretend medical instruments that end the nightly battles over hand-washing, tooth-brushing and screen time. For kids 3–8.">
+    <meta name="twitter:image" content="https://simbino.com/tiny-doctor-feature.png">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Tiny Doctor",
+      "alternateName": "三假小医院",
+      "url": "https://simbino.com/tiny-doctor.html",
+      "image": "https://simbino.com/tiny-doctor-icon.png",
+      "description": "A pretend doctor kit parents run, with a wink, to win the nightly battles: hand-washing, tooth-brushing, too much ice cream, too much screen time. Six pretend instruments, five languages, gentle mode, and a parent debrief guide. For kids ages 3-8.",
+      "applicationCategory": "GameApplication",
+      "applicationSubCategory": "Pretend Play",
+      "operatingSystem": "ANDROID",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.simbino.honghong",
+      "inLanguage": ["en", "zh", "hi", "es", "fr"],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Simbino LLC",
+        "url": "https://simbino.com"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What ages is Tiny Doctor for?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Tiny Doctor is designed for kids ages 3-8, played together with a parent or grown-up. It works best as a shared bit of theater, not solo screen time." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this the same as Tiny Doctor: Pet Hospital or Tiny Doctor Adventure?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No — those are animal-clinic games by other studios. Simbino's Tiny Doctor is a habit-building pretend doctor kit: the patient is your own child, and the goal is winning real-life routines like hand-washing and tooth-brushing." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Tiny Doctor free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Tiny Doctor is free to download with two instruments included — the stomach ultrasound and the hand microscope. A single one-time purchase unlocks all six. There are no subscriptions and no ads." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Tiny Doctor collect any data about my child?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Tiny Doctor collects no data at all — there is no analytics SDK, no ad network, and no account system. Everything stays on your phone." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Tiny Doctor available on iPhone?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The iOS version is finished and currently in App Store review. It is available on Google Play today." }
+        }
+      ]
+    }
+    </script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        a { color: #2a9d8f; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* Navigation */
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+        .nav-inner {
+            max-width: 1100px; margin: 0 auto; padding: 0 20px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .nav-brand { font-size: 1.3em; font-weight: 700; color: #333; }
+        .nav-brand span { color: #ec428c; }
+        .nav-links a {
+            color: #555; margin-left: 30px; font-size: 0.95em; font-weight: 500;
+        }
+        .nav-links a:hover { color: #2a9d8f; text-decoration: none; }
+
+        /* Hero */
+        .hero {
+            padding: 140px 20px 70px;
+            text-align: center;
+            background: linear-gradient(135deg, #f0faf8 0%, #fff 50%, #fdf6ec 100%);
+        }
+        .hero img.icon {
+            width: 140px; height: 140px; border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(42,157,143,0.25);
+            margin-bottom: 25px;
+        }
+        .hero h1 {
+            font-size: 2.6em; font-weight: 800; color: #222;
+            margin-bottom: 12px; line-height: 1.2;
+        }
+        .hero h1 span { color: #2a9d8f; }
+        .hero .zh-name { font-size: 1.15em; color: #888; margin-bottom: 8px; }
+        .hero p.lede {
+            font-size: 1.2em; color: #666; max-width: 640px; margin: 0 auto 30px;
+        }
+        .app-badge {
+            display: inline-block; padding: 12px 28px;
+            background: #000; color: #fff; border-radius: 10px;
+            font-weight: 600; font-size: 0.95em;
+        }
+        .app-badge:hover { background: #222; text-decoration: none; }
+        .app-badge.soon {
+            background: #eee; color: #888; cursor: default;
+        }
+        .app-badge.soon:hover { background: #eee; text-decoration: none; }
+
+        /* Sections */
+        section { padding: 70px 20px; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .section-title {
+            font-size: 2em; font-weight: 700; text-align: center;
+            margin-bottom: 15px; color: #222;
+        }
+        .section-subtitle {
+            text-align: center; color: #666; font-size: 1.1em;
+            max-width: 640px; margin: 0 auto 50px;
+        }
+        .alt { background: #fafafa; }
+
+        /* How it works */
+        .how p { max-width: 760px; margin: 0 auto 18px; color: #555; font-size: 1.05em; }
+
+        /* Instruments */
+        .instrument-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;
+        }
+        .instrument-card {
+            background: #fff; border: 1px solid #eee; border-radius: 16px;
+            padding: 28px;
+        }
+        .instrument-card .emoji { font-size: 1.8em; margin-bottom: 12px; }
+        .instrument-card h3 { font-size: 1.1em; color: #222; margin-bottom: 8px; }
+        .instrument-card p { color: #666; font-size: 0.93em; }
+
+        /* Screenshots */
+        .shots {
+            display: grid; grid-template-columns: 1fr; gap: 25px;
+            max-width: 860px; margin: 0 auto;
+        }
+        .shots img {
+            width: 100%; border-radius: 16px; border: 1px solid #eee;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        /* Parents */
+        .parent-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+        .parent-card {
+            background: #fff; border: 1px solid #eee; border-radius: 16px; padding: 28px;
+        }
+        .parent-card h3 { font-size: 1.1em; color: #222; margin-bottom: 8px; }
+        .parent-card p { color: #666; font-size: 0.95em; }
+
+        /* FAQ */
+        .faq-item { max-width: 760px; margin: 0 auto 28px; }
+        .faq-item h3 { font-size: 1.15em; color: #222; margin-bottom: 8px; }
+        .faq-item p { color: #555; }
+
+        /* CTA */
+        .cta { text-align: center; }
+
+        /* Footer */
+        footer { background: #222; color: #aaa; padding: 40px 20px; text-align: center; }
+        footer a { color: #aaa; }
+        footer a:hover { color: #2a9d8f; }
+        footer p { font-size: 0.9em; margin-bottom: 8px; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2em; }
+            .instrument-grid { grid-template-columns: 1fr; }
+            .parent-grid { grid-template-columns: 1fr; }
+            .nav-links a { margin-left: 15px; font-size: 0.85em; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-inner">
+            <div class="nav-brand"><a href="index.html" style="color:#333">simbino<span>.</span></a></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#instruments">Instruments</a>
+                <a href="#parents">For Parents</a>
+                <a href="#faq">FAQ</a>
+                <a href="privacy.html">Privacy</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <img class="icon" src="tiny-doctor-icon.png" alt="Tiny Doctor app icon — a smiling pretend doctor kit for kids">
+            <h1>Tiny Doctor<br><span>The Pretend Doctor Kit That Fixes Kids' Habits</span></h1>
+            <p class="zh-name">中文名:三假小医院 &mdash; 一家「三假」认证的假医院</p>
+            <p class="lede">A doctor pretend play app for kids ages 3&ndash;8. Six silly medical instruments a grown-up runs, with a wink, to end the nightly battles: hand-washing, tooth-brushing, too much ice cream, and too much screen time.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.simbino.honghong" class="app-badge" target="_blank" rel="noopener">Get it on Google Play</a>
+            <span class="app-badge soon" style="margin-left: 10px;">App Store &mdash; coming soon</span>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="how">
+        <div class="container">
+            <h2 class="section-title">How Tiny Doctor Works</h2>
+            <p>Point the &ldquo;scanner&rdquo; at your child and the instrument finds something wonderfully silly &mdash; a sleepy ice-cream worm in the tummy, sugar bugs napping on a tooth, germs holding a sports day on an unwashed hand.</p>
+            <p>Every screen is clearly labeled a <strong>PRETEND SCANNER</strong>. The child presses the one green button, the machine hums, and everything comes back clean, every time. The lesson lands because the fix is theirs.</p>
+            <p>Pressure goes on the habit, never on the kid. Remember to smile when you show it.</p>
+        </div>
+    </section>
+
+    <!-- Instruments -->
+    <section class="alt" id="instruments">
+        <div class="container">
+            <h2 class="section-title">Six Pretend Instruments</h2>
+            <p class="section-subtitle">Each one targets a habit every parent recognizes.</p>
+            <div class="instrument-grid">
+                <div class="instrument-card">
+                    <div class="emoji">&#x1FA7A;</div>
+                    <h3>Stomach Ultrasound</h3>
+                    <p>Meet the ice-cream worm. For too much ice cream and picky eating.</p>
+                </div>
+                <div class="instrument-card">
+                    <div class="emoji">&#x1F52C;</div>
+                    <h3>Hand Microscope</h3>
+                    <p>Germs at 40&times; magnification. Turns hand-washing into the child's own victory.</p>
+                </div>
+                <div class="instrument-card">
+                    <div class="emoji">&#x1F441;&#xFE0F;</div>
+                    <h3>Eye Exam</h3>
+                    <p>The eye sprite and the blurry chart. For screen-time negotiations.</p>
+                </div>
+                <div class="instrument-card">
+                    <div class="emoji">&#x1F9B7;</div>
+                    <h3>Teeth Checkup</h3>
+                    <p>Sugar bugs vs. the toothbrush. The tooth-brushing battle, ended.</p>
+                </div>
+                <div class="instrument-card">
+                    <div class="emoji">&#x1F9B4;</div>
+                    <h3>Bone CT</h3>
+                    <p>The bone sprite and gentle-play cracks. For sofa acrobatics.</p>
+                </div>
+                <div class="instrument-card">
+                    <div class="emoji">&#x1F9F4;</div>
+                    <h3>Scalp Microscope</h3>
+                    <p>Shampoo-dodging germs, exposed. Hair-washing refusal, solved.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">See It in Action</h2>
+            <div class="shots">
+                <img src="tiny-doctor-shot-1.jpg" alt="Tiny Doctor instrument selector screen showing six pretend medical instruments for kids" loading="lazy">
+                <img src="tiny-doctor-shot-2.jpg" alt="Tiny Doctor stomach ultrasound screen finding a silly ice-cream worm in a kid's tummy" loading="lazy">
+                <img src="tiny-doctor-shot-3.jpg" alt="Tiny Doctor teeth checkup screen showing sugar bugs before tooth brushing" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- For Parents -->
+    <section class="alt" id="parents">
+        <div class="container">
+            <h2 class="section-title">Built for Parents</h2>
+            <p class="section-subtitle">This is a tool you run &mdash; not a game that babysits.</p>
+            <div class="parent-grid">
+                <div class="parent-card">
+                    <h3>Parent Debrief Guide</h3>
+                    <p>A parent area (2-second hold to enter) with a debrief script for landing the joke kindly, so the pretend play turns into a real habit.</p>
+                </div>
+                <div class="parent-card">
+                    <h3>Gentle Mode</h3>
+                    <p>Caps every instrument at &ldquo;watch&rdquo; for sensitive kids. Nothing scary, ever &mdash; every scan comes back clean.</p>
+                </div>
+                <div class="parent-card">
+                    <h3>Five Languages</h3>
+                    <p>English, Chinese (中文), Hindi, Spanish, and French &mdash; the whole family can play in their own language.</p>
+                </div>
+                <div class="parent-card">
+                    <h3>No Ads. No Accounts. No Data.</h3>
+                    <p>One-time purchase unlocks all instruments. No analytics SDK, no ad network, no sign-in. Nothing ever leaves the phone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>What ages is Tiny Doctor for?</h3>
+                <p>Tiny Doctor is designed for kids ages 3&ndash;8, played together with a parent or grown-up. It works best as a shared bit of theater, not solo screen time.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is this the same as Tiny Doctor: Pet Hospital or Tiny Doctor Adventure?</h3>
+                <p>No &mdash; those are animal-clinic games by other studios. Simbino's Tiny Doctor is a habit-building pretend doctor kit: the &ldquo;patient&rdquo; is your own child, and the goal is winning real-life routines like hand-washing and tooth-brushing.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is it free?</h3>
+                <p>Tiny Doctor is free to download with two instruments included &mdash; the stomach ultrasound and the hand microscope. A single one-time purchase unlocks all six. There are no subscriptions and no ads.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Does it collect any data about my child?</h3>
+                <p>No. Tiny Doctor collects no data at all &mdash; there is no analytics SDK, no ad network, and no account system. Everything stays on your phone. See our <a href="privacy.html">privacy policy</a>.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is it available on iPhone?</h3>
+                <p>The iOS version is finished and currently in App Store review. It's on <a href="https://play.google.com/store/apps/details?id=com.simbino.honghong" target="_blank" rel="noopener">Google Play</a> today.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="alt cta">
+        <div class="container">
+            <h2 class="section-title">End Tonight's Battle with a Smile</h2>
+            <p class="section-subtitle">Download Tiny Doctor and let the ice-cream worm do the talking.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.simbino.honghong" class="app-badge" target="_blank" rel="noopener">Get it on Google Play</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><a href="index.html">Simbino LLC</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="mailto:info@simbino.com">info@simbino.com</a></p>
+        <p>&copy; 2026 Simbino LLC. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
