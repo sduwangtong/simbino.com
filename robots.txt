@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://simbino.com/sitemap.xml
+
+# AI agents: structured site guide at https://simbino.com/llms.txt
