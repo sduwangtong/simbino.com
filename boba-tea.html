@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18100115415"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-18100115415');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boba Tea – Milk Tea &amp; Bubble Tea Tracker App (Boba Diary) | Simbino</title>
+    <meta name="description" content="Boba Tea (Boba Diary) is the milk tea tracker app for boba lovers. Log every cup in seconds, scan receipts with AI, track sugar, calories and spending, find boba shops near you, collect boba cards, and get a weekly city boba newsletter. Free on iOS and Android.">
+    <link rel="canonical" href="https://simbino.com/boba-tea.html">
+    <link rel="alternate" hreflang="en" href="https://simbino.com/boba-tea.html">
+    <link rel="alternate" hreflang="zh" href="https://simbino.com/boba-tea-zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://simbino.com/boba-tea.html">
+    <link rel="icon" type="image/png" href="app-icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Simbino">
+    <meta property="og:title" content="Boba Tea – Milk Tea &amp; Bubble Tea Tracker App">
+    <meta property="og:description" content="Log every cup in seconds, scan receipts with AI, track sugar and spending, find boba shops near you. Free on iOS and Android.">
+    <meta property="og:url" content="https://simbino.com/boba-tea.html">
+    <meta property="og:image" content="https://simbino.com/app-icon.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Boba Tea – Milk Tea &amp; Bubble Tea Tracker App">
+    <meta name="twitter:description" content="Log every cup in seconds, scan receipts with AI, track sugar and spending, find boba shops near you. Free on iOS and Android.">
+    <meta name="twitter:image" content="https://simbino.com/app-icon.png">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Boba Tea",
+      "alternateName": ["Boba Diary", "奶茶日记"],
+      "url": "https://simbino.com/boba-tea.html",
+      "image": "https://simbino.com/app-icon.png",
+      "description": "A milk tea tracker app for boba lovers. Log drinks in seconds, scan receipts with AI, track sugar, calories and monthly spending, find boba shops near you, collect boba cards, and read a weekly city boba newsletter.",
+      "applicationCategory": "LifestyleApplication",
+      "applicationSubCategory": "Food & Drink Tracker",
+      "operatingSystem": "iOS, ANDROID",
+      "installUrl": "https://apps.apple.com/us/app/boba-diary/id6759429663",
+      "inLanguage": ["en", "zh"],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Simbino LLC",
+        "url": "https://simbino.com"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Boba Tea free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Boba Tea (also listed as Boba Diary) is free to download and use on both iOS and Android." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Boba Tea a game like Boba Story?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No — Boba Tea is a real-life milk tea tracker, not a game. You log the bubble tea you actually drink, watch your sugar and spending, and find real boba shops near you. The boba cards you collect are stamps earned from your own drinks." }
+        },
+        {
+          "@type": "Question",
+          "name": "What can I track with Boba Tea?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Every cup you drink — flavor, size, sugar level, toppings, price and photo. The app turns your log into sugar and calorie estimates, a monthly spending ledger, goals, and trend charts. You can also snap a receipt and let AI fill in the details." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Boba Tea find boba shops near me?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Near Me tab shows boba shops around you, marks new openings in town, and lets you log a drink straight from the shop you're at." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Boba Tea available in Chinese?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The app is fully bilingual — English and Chinese (中文名:奶茶日记) — on both iOS and Android." }
+        }
+      ]
+    }
+    </script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        a { color: #ec428c; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* Navigation */
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+        .nav-inner {
+            max-width: 1100px; margin: 0 auto; padding: 0 20px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .nav-brand { font-size: 1.3em; font-weight: 700; color: #333; }
+        .nav-brand span { color: #ec428c; }
+        .nav-links a {
+            color: #555; margin-left: 30px; font-size: 0.95em; font-weight: 500;
+        }
+        .nav-links a:hover { color: #ec428c; text-decoration: none; }
+
+        /* Hero */
+        .hero {
+            padding: 140px 20px 70px;
+            text-align: center;
+            background: linear-gradient(135deg, #fdf0f6 0%, #fff 50%, #fdf6ec 100%);
+        }
+        .hero img.icon {
+            width: 140px; height: 140px; border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(236,66,140,0.25);
+            margin-bottom: 25px;
+        }
+        .hero h1 {
+            font-size: 2.6em; font-weight: 800; color: #222;
+            margin-bottom: 12px; line-height: 1.2;
+        }
+        .hero h1 span { color: #ec428c; }
+        .hero .zh-name { font-size: 1.15em; color: #888; margin-bottom: 8px; }
+        .hero p.lede {
+            font-size: 1.2em; color: #666; max-width: 640px; margin: 0 auto 30px;
+        }
+        .app-badge {
+            display: inline-block; padding: 12px 28px;
+            background: #000; color: #fff; border-radius: 10px;
+            font-weight: 600; font-size: 0.95em;
+        }
+        .app-badge:hover { background: #222; text-decoration: none; }
+
+        /* Sections */
+        section { padding: 70px 20px; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .section-title {
+            font-size: 2em; font-weight: 700; text-align: center;
+            margin-bottom: 15px; color: #222;
+        }
+        .section-subtitle {
+            text-align: center; color: #666; font-size: 1.1em;
+            max-width: 640px; margin: 0 auto 50px;
+        }
+        .alt { background: #fafafa; }
+
+        /* How it works */
+        .how p { max-width: 760px; margin: 0 auto 18px; color: #555; font-size: 1.05em; }
+
+        /* Features */
+        .feature-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;
+        }
+        .feature-card {
+            background: #fff; border: 1px solid #eee; border-radius: 16px;
+            padding: 28px;
+        }
+        .feature-card .emoji { font-size: 1.8em; margin-bottom: 12px; }
+        .feature-card h3 { font-size: 1.1em; color: #222; margin-bottom: 8px; }
+        .feature-card p { color: #666; font-size: 0.93em; }
+
+        /* FAQ */
+        .faq-item { max-width: 760px; margin: 0 auto 28px; }
+        .faq-item h3 { font-size: 1.15em; color: #222; margin-bottom: 8px; }
+        .faq-item p { color: #555; }
+
+        /* CTA */
+        .cta { text-align: center; }
+
+        /* Footer */
+        footer { background: #222; color: #aaa; padding: 40px 20px; text-align: center; }
+        footer a { color: #aaa; }
+        footer a:hover { color: #ec428c; }
+        footer p { font-size: 0.9em; margin-bottom: 8px; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2em; }
+            .feature-grid { grid-template-columns: 1fr; }
+            .nav-links a { margin-left: 15px; font-size: 0.85em; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-inner">
+            <div class="nav-brand"><a href="index.html" style="color:#333">simbino<span>.</span></a></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#features">Features</a>
+                <a href="#faq">FAQ</a>
+                <a href="boba-tea-zh.html">中文</a>
+                <a href="privacy.html">Privacy</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <img class="icon" src="app-icon.png" alt="Boba Tea app icon — the milk tea tracker also known as Boba Diary">
+            <h1>Boba Tea<br><span>The Milk Tea Tracker for Boba Lovers</span></h1>
+            <p class="zh-name">Also known as Boba Diary &middot; 中文名:奶茶日记</p>
+            <p class="lede">Log every cup of bubble tea in seconds, watch your sugar and spending, find boba shops near you, and collect boba cards along the way. Free on iOS and Android.</p>
+            <a href="https://apps.apple.com/us/app/boba-diary/id6759429663" class="app-badge" target="_blank" rel="noopener">Download for iOS</a>
+            <a href="https://play.google.com/store/apps/details?id=com.milkteatracker" class="app-badge" target="_blank" rel="noopener" style="margin-left: 10px;">Get it on Google Play</a>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="how">
+        <div class="container">
+            <h2 class="section-title">How Boba Tea Works</h2>
+            <p>Order your drink, open the app, log it in a few taps &mdash; flavor, size, sugar level, toppings, price, photo. Or just snap the receipt and let <strong>AI receipt scanning</strong> fill everything in.</p>
+            <p>Your log quietly becomes the interesting part: sugar and calorie estimates per drink, a monthly spending ledger, goals you set for yourself, and trend charts that show whether &ldquo;less sugar this month&rdquo; actually happened.</p>
+            <p>It&rsquo;s a diary, not a scold. You decide what your boba habit should look like &mdash; the app just keeps honest notes.</p>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="alt" id="features">
+        <div class="container">
+            <h2 class="section-title">Everything a Boba Lover Needs</h2>
+            <p class="section-subtitle">Six things the app does for your milk tea life.</p>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="emoji">&#x1F9CB;</div>
+                    <h3>Quick Drink Logging</h3>
+                    <p>Flavor, size, sugar level, toppings, price and photo &mdash; logged in seconds, right at the counter.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="emoji">&#x1F9FE;</div>
+                    <h3>AI Receipt Scanning</h3>
+                    <p>Snap the receipt and the drink details fill themselves in. No typing with a straw in your mouth.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="emoji">&#x1F4CA;</div>
+                    <h3>Sugar &amp; Calorie Tracking</h3>
+                    <p>Per-drink sugar and calorie estimates, monthly totals, and trends you can actually act on.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="emoji">&#x1F4CD;</div>
+                    <h3>Boba Near Me</h3>
+                    <p>Find boba shops around you, spot NEW openings in town, and log straight from the shop you're at.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="emoji">&#x1F0CF;</div>
+                    <h3>Boba Cards</h3>
+                    <p>Every drink you log can earn collectible boba cards &mdash; stamps, rarities and foils for your collection.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="emoji">&#x1F4F0;</div>
+                    <h3>Weekly Boba News</h3>
+                    <p>An in-app city newsletter with real local boba news, new shops and a home-boba tip &mdash; NYC and SF Bay to start.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>Is Boba Tea free?</h3>
+                <p>Yes. Boba Tea (also listed as Boba Diary) is free to download and use on both <a href="https://apps.apple.com/us/app/boba-diary/id6759429663" target="_blank" rel="noopener">iOS</a> and <a href="https://play.google.com/store/apps/details?id=com.milkteatracker" target="_blank" rel="noopener">Android</a>.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is Boba Tea a game like Boba Story?</h3>
+                <p>No &mdash; Boba Tea is a real-life milk tea tracker, not a game. You log the bubble tea you actually drink, watch your sugar and spending, and find real boba shops near you. The boba cards you collect are stamps earned from your own drinks.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What can I track?</h3>
+                <p>Every cup &mdash; flavor, size, sugar level, toppings, price and photo. The app turns your log into sugar and calorie estimates, a monthly spending ledger, goals, and trend charts. You can also snap a receipt and let AI fill in the details.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can it find boba shops near me?</h3>
+                <p>Yes. The Near Me tab shows boba shops around you, marks new openings in town, and lets you log a drink straight from the shop you're at.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is it available in Chinese?</h3>
+                <p>Yes. The app is fully bilingual &mdash; English and Chinese (<a href="boba-tea-zh.html">中文名:奶茶日记</a>) &mdash; on both iOS and Android.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="alt cta">
+        <div class="container">
+            <h2 class="section-title">Your Next Cup Deserves a Diary</h2>
+            <p class="section-subtitle">Download Boba Tea and start your boba log today.</p>
+            <a href="https://apps.apple.com/us/app/boba-diary/id6759429663" class="app-badge" target="_blank" rel="noopener">Download for iOS</a>
+            <a href="https://play.google.com/store/apps/details?id=com.milkteatracker" class="app-badge" target="_blank" rel="noopener" style="margin-left: 10px;">Get it on Google Play</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><a href="index.html">Simbino LLC</a> &middot; <a href="boba-tea-zh.html">奶茶日记(中文)</a> &middot; <a href="tiny-doctor.html">Tiny Doctor</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="mailto:info@simbino.com">info@simbino.com</a></p>
+        <p>&copy; 2026 Simbino LLC. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

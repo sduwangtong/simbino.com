@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18100115415"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-18100115415');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奶茶日记 – 记录每一杯奶茶的 App,糖分热量花销全都有数(Boba Tea)| Simbino</title>
+    <meta name="description" content="奶茶日记(英文名 Boba Tea / Boba Diary)是给奶茶爱好者的记录 App:几秒记下每一杯,AI 扫小票自动填单,追踪糖分、热量和每月花销,找附近奶茶店,集奶茶卡,还有每周城市奶茶快报。iOS 和安卓免费下载,中英双语。">
+    <link rel="canonical" href="https://simbino.com/boba-tea-zh.html">
+    <link rel="alternate" hreflang="zh" href="https://simbino.com/boba-tea-zh.html">
+    <link rel="alternate" hreflang="en" href="https://simbino.com/boba-tea.html">
+    <link rel="alternate" hreflang="x-default" href="https://simbino.com/boba-tea.html">
+    <link rel="icon" type="image/png" href="app-icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Simbino">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="奶茶日记 – 记录每一杯奶茶的 App">
+    <meta property="og:description" content="几秒记下每一杯,AI 扫小票,糖分热量花销全都有数,还能找附近奶茶店。iOS / 安卓免费下载。">
+    <meta property="og:url" content="https://simbino.com/boba-tea-zh.html">
+    <meta property="og:image" content="https://simbino.com/app-icon.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="奶茶日记 – 记录每一杯奶茶的 App">
+    <meta name="twitter:description" content="几秒记下每一杯,AI 扫小票,糖分热量花销全都有数。iOS / 安卓免费下载。">
+    <meta name="twitter:image" content="https://simbino.com/app-icon.png">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "奶茶日记",
+      "alternateName": ["Boba Tea", "Boba Diary"],
+      "url": "https://simbino.com/boba-tea-zh.html",
+      "image": "https://simbino.com/app-icon.png",
+      "description": "给奶茶爱好者的记录 App:几秒记下每一杯,AI 扫小票自动填单,追踪糖分、热量和每月花销,找附近奶茶店,集奶茶卡,每周城市奶茶快报。",
+      "applicationCategory": "LifestyleApplication",
+      "applicationSubCategory": "饮食记录",
+      "operatingSystem": "iOS, ANDROID",
+      "installUrl": "https://apps.apple.com/us/app/boba-diary/id6759429663",
+      "inLanguage": ["zh", "en"],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Simbino LLC",
+        "url": "https://simbino.com"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "奶茶日记收费吗?",
+          "acceptedAnswer": { "@type": "Answer", "text": "免费。奶茶日记(Boba Tea / Boba Diary)在 iOS 和安卓都可以免费下载使用。" }
+        },
+        {
+          "@type": "Question",
+          "name": "奶茶日记能记录什么?",
+          "acceptedAnswer": { "@type": "Answer", "text": "每一杯奶茶——口味、杯型、糖度、加料、价格和照片。App 会把记录变成糖分和热量估算、每月花销账本、自定目标和趋势图。也可以直接拍小票,AI 自动填好明细。" }
+        },
+        {
+          "@type": "Question",
+          "name": "能找附近的奶茶店吗?",
+          "acceptedAnswer": { "@type": "Answer", "text": "能。「附近」页面会显示你周围的奶茶店,标出城里新开的店,还能在店里直接记录这一杯。" }
+        },
+        {
+          "@type": "Question",
+          "name": "奶茶卡是什么?",
+          "acceptedAnswer": { "@type": "Answer", "text": "每记录一杯奶茶都有机会获得可收藏的奶茶卡——不同稀有度、闪卡都有,是用你自己喝的奶茶攒出来的收藏册。" }
+        },
+        {
+          "@type": "Question",
+          "name": "有中文版吗?",
+          "acceptedAnswer": { "@type": "Answer", "text": "有。App 完整支持中文和英文,iOS 和安卓都是双语的。" }
+        }
+      ]
+    }
+    </script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #fff;
+        }
+        a { color: #ec428c; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+        .nav-inner {
+            max-width: 1100px; margin: 0 auto; padding: 0 20px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .nav-brand { font-size: 1.3em; font-weight: 700; color: #333; }
+        .nav-brand span { color: #ec428c; }
+        .nav-links a {
+            color: #555; margin-left: 30px; font-size: 0.95em; font-weight: 500;
+        }
+        .nav-links a:hover { color: #ec428c; text-decoration: none; }
+
+        .hero {
+            padding: 140px 20px 70px;
+            text-align: center;
+            background: linear-gradient(135deg, #fdf0f6 0%, #fff 50%, #fdf6ec 100%);
+        }
+        .hero img.icon {
+            width: 140px; height: 140px; border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(236,66,140,0.25);
+            margin-bottom: 25px;
+        }
+        .hero h1 {
+            font-size: 2.6em; font-weight: 800; color: #222;
+            margin-bottom: 12px; line-height: 1.25;
+        }
+        .hero h1 span { color: #ec428c; }
+        .hero .en-name { font-size: 1.15em; color: #888; margin-bottom: 8px; }
+        .hero p.lede {
+            font-size: 1.2em; color: #666; max-width: 640px; margin: 0 auto 30px;
+        }
+        .app-badge {
+            display: inline-block; padding: 12px 28px;
+            background: #000; color: #fff; border-radius: 10px;
+            font-weight: 600; font-size: 0.95em;
+        }
+        .app-badge:hover { background: #222; text-decoration: none; }
+
+        section { padding: 70px 20px; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .section-title {
+            font-size: 2em; font-weight: 700; text-align: center;
+            margin-bottom: 15px; color: #222;
+        }
+        .section-subtitle {
+            text-align: center; color: #666; font-size: 1.1em;
+            max-width: 640px; margin: 0 auto 50px;
+        }
+        .alt { background: #fafafa; }
+
+        .how p { max-width: 760px; margin: 0 auto 18px; color: #555; font-size: 1.05em; }
+
+        .feature-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;
+        }
+        .feature-card {
+            background: #fff; border: 1px solid #eee; border-radius: 16px;
+            padding: 28px;
+        }
+        .feature-card .emoji { font-size: 1.8em; margin-bottom: 12px; }
+        .feature-card h3 { font-size: 1.1em; color: #222; margin-bottom: 8px; }
+        .feature-card p { color: #666; font-size: 0.93em; }
+
+        .faq-item { max-width: 760px; margin: 0 auto 28px; }
+        .faq-item h3 { font-size: 1.15em; color: #222; margin-bottom: 8px; }
+        .faq-item p { color: #555; }
+
+        .cta { text-align: center; }
+
+        footer { background: #222; color: #aaa; padding: 40px 20px; text-align: center; }
+        footer a { color: #aaa; }
+        footer a:hover { color: #ec428c; }
+        footer p { font-size: 0.9em; margin-bottom: 8px; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2em; }
+            .feature-grid { grid-template-columns: 1fr; }
+            .nav-links a { margin-left: 15px; font-size: 0.85em; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-inner">
+            <div class="nav-brand"><a href="index.html" style="color:#333">simbino<span>.</span></a></div>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="#features">功能</a>
+                <a href="#faq">常见问题</a>
+                <a href="boba-tea.html">English</a>
+                <a href="privacy.html">隐私</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <img class="icon" src="app-icon.png" alt="奶茶日记 Boba Tea 应用图标">
+            <h1>奶茶日记<br><span>记录每一杯奶茶的 App</span></h1>
+            <p class="en-name">英文名 Boba Tea &middot; 也叫 Boba Diary</p>
+            <p class="lede">几秒记下每一杯:口味、糖度、加料、价格、照片。糖分热量花销全都有数,还能找附近奶茶店、集奶茶卡。iOS / 安卓免费下载,中英双语。</p>
+            <a href="https://apps.apple.com/us/app/boba-diary/id6759429663" class="app-badge" target="_blank" rel="noopener">App Store 下载</a>
+            <a href="https://play.google.com/store/apps/details?id=com.milkteatracker&hl=zh" class="app-badge" target="_blank" rel="noopener" style="margin-left: 10px;">Google Play 下载</a>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="how">
+        <div class="container">
+            <h2 class="section-title">奶茶日记怎么用</h2>
+            <p>点完单,打开 App,几下就记好这一杯——口味、杯型、糖度、加料、价格、照片。懒得填?直接拍小票,<strong>AI 自动识别</strong>帮你填好明细。</p>
+            <p>记录会悄悄变成更有意思的东西:每杯的糖分热量估算、每月奶茶账本、自己定的目标,还有趋势图——「这个月少喝点糖」到底做没做到,一眼就知道。</p>
+            <p>它是日记,不是唠叨。你的奶茶生活该什么样,你说了算——App 只负责诚实记账。</p>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="alt" id="features">
+        <div class="container">
+            <h2 class="section-title">奶茶爱好者要的,都在这</h2>
+            <p class="section-subtitle">六件事,一个 App 全包了。</p>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="emoji">&#x1F9CB;</div>
+                    <h3>快速记录</h3>
+                    <p>口味、杯型、糖度、加料、价格、照片——在柜台前几秒记完。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="emoji">&#x1F9FE;</div>
+                    <h3>AI 扫小票</h3>
+                    <p>拍一张小票,明细自动填好。嘴里叼着吸管也能记账。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="emoji">&#x1F4CA;</div>
+                    <h3>糖分热量追踪</h3>
+                    <p>每杯的糖分热量估算、每月汇总、趋势图,喝了多少心里有数。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="emoji">&#x1F4CD;</div>
+                    <h3>附近奶茶店</h3>
+                    <p>看看周围有哪些奶茶店,城里新开的店有 NEW 标,在店里就能直接记录。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="emoji">&#x1F0CF;</div>
+                    <h3>奶茶卡收藏</h3>
+                    <p>每记一杯都有机会开出奶茶卡——稀有度、闪卡都有,用喝过的奶茶攒收藏册。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="emoji">&#x1F4F0;</div>
+                    <h3>每周奶茶快报</h3>
+                    <p>App 内的城市奶茶周报:本地新店、真实奶茶新闻、在家做奶茶小技巧。纽约和湾区先行。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">常见问题</h2>
+            <div class="faq-item">
+                <h3>收费吗?</h3>
+                <p>免费。奶茶日记在 <a href="https://apps.apple.com/us/app/boba-diary/id6759429663" target="_blank" rel="noopener">App Store</a> 和 <a href="https://play.google.com/store/apps/details?id=com.milkteatracker&hl=zh" target="_blank" rel="noopener">Google Play</a> 都可以免费下载使用。</p>
+            </div>
+            <div class="faq-item">
+                <h3>能记录什么?</h3>
+                <p>每一杯奶茶——口味、杯型、糖度、加料、价格和照片。App 会把记录变成糖分热量估算、每月账本、自定目标和趋势图。也可以直接拍小票,AI 自动填好明细。</p>
+            </div>
+            <div class="faq-item">
+                <h3>能找附近的奶茶店吗?</h3>
+                <p>能。「附近」页面会显示你周围的奶茶店,标出城里新开的店,还能在店里直接记录这一杯。</p>
+            </div>
+            <div class="faq-item">
+                <h3>奶茶卡是什么?</h3>
+                <p>每记录一杯都有机会获得可收藏的奶茶卡——不同稀有度、闪卡都有,是用你自己喝的奶茶攒出来的收藏册。</p>
+            </div>
+            <div class="faq-item">
+                <h3>有中文版吗?</h3>
+                <p>有。App 完整支持中文和英文,iOS 和安卓都是双语的。英文页面在<a href="boba-tea.html">这里</a>。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="alt cta">
+        <div class="container">
+            <h2 class="section-title">下一杯,记下来</h2>
+            <p class="section-subtitle">下载奶茶日记,从今天这杯开始。</p>
+            <a href="https://apps.apple.com/us/app/boba-diary/id6759429663" class="app-badge" target="_blank" rel="noopener">App Store 下载</a>
+            <a href="https://play.google.com/store/apps/details?id=com.milkteatracker&hl=zh" class="app-badge" target="_blank" rel="noopener" style="margin-left: 10px;">Google Play 下载</a>
+        </div>
+    </section>
+
+    <footer>
+        <p><a href="index.html">Simbino LLC</a> &middot; <a href="boba-tea.html">Boba Tea (English)</a> &middot; <a href="tiny-doctor-zh.html">三假小医院</a> &middot; <a href="privacy.html">隐私政策</a> &middot; <a href="terms.html">服务条款</a> &middot; <a href="mailto:info@simbino.com">info@simbino.com</a></p>
+        <p>&copy; 2026 Simbino LLC. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
