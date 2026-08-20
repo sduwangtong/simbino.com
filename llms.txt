@@ -11,8 +11,8 @@ A doctor pretend-play app for kids ages 3–8 that parents run to win daily habi
 - Not the same as "Tiny Doctor: Pet Hospital" or "Tiny Doctor Adventure" (animal-clinic games by other studios).
 
 Download:
+- [App Store — Tiny Doctor](https://apps.apple.com/app/id6796879224): iPhone and iPad, free
 - [Google Play — Tiny Doctor](https://play.google.com/store/apps/details?id=com.simbino.honghong): Android, free
-- iOS: in App Store review, coming soon
 
 Details:
 - [Tiny Doctor overview (English)](https://simbino.com/tiny-doctor.html): features, instruments, FAQ
